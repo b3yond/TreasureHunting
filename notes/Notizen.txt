@@ -1,0 +1,190 @@
+# # # # #
+# TO-DO #
+# # # # #
+radiobuttons...
+mir Gedanken über das Charakterfenster und so machen
+ARRGGHGH
+
+
+
+
+
+
+
+Charwindow:
+Inventar
+Charakterwerte
+Ausrüstung + Upgrades
+
+Geld sind BITCOINS!
+
+Main Menu
+Charaktererstellung
+Profil:
+    Händler?
+    Levelwahl?
+    Intro?
+    build_battlefield
+    show_foes
+    main?
+        initiative
+        your_turn
+            walk
+                new_level?
+            attack
+                melee_skill
+                melee_damage
+                gun_skill
+                gun_damage
+                dead
+        ai_turn
+            state       # which action?
+            act         # execute action
+            player_seen # if player sees action, animation
+    Fluchtlevel?
+    Outro?
+
+
+# Klassen
+Individuum
+    Player
+        Vampire
+        Werewolf
+        Angel
+    AI
+        
+Item
+    Swords
+    Guns
+    Upgrades
+
+
+
+
+Rassen:
+Mensch Engel Vampir Werwolf
+
+Attribute:
+Agilität(Schnelligkeit?) Konstitution Geschick Stärke
+LebenKS BewegungKA NahkampfGS FernkampfGA
+Initiative?
+
+
+Bewegung, Intiative, Züge:
+#1:
+man läuft erst $Bewegung Schritte, und kann dann noch handeln
+#2:
+man hat $Intitiative Aktionen, in denen man entweder $Bewegung Schritte laufen oder handeln kann
+#3:
+man hat 1 Aktion, in der man entweder x Schritte laufen oder handeln kann
+jeder ist abwechselnd alle $Intiative Bewegungen dran
+
+
+Nahkampf:
+Treffen: Nahkampf(A) + random0-50 > Nahkampf(D) + random0-20
+Schaden: Stärke*5 + Waffe
+
+Fernkampf:
+Treffen: random1-100 > 100 - Fernkampf(A)
+Schaden: Waffe
+
+10% failchance bei jedem Test
+
+Werte:
+Kon*8 + Str*5 + 10 = Leben
+Ges*3 + Str*5 = Nahkampf
+Kon*3 + Agi*8 /10 = Bewegung
+Ges*7 + Agi*3 = Fernkampf
+
+Golem
+Leben: 65 + 40 = 115
+Nahkampf: 12 + 40 = 52
+Bewegung: 35 + 32 = 6.7
+Fernkampf: 28 + 12 = 40
+Kon = 7
+Srg = 8
+Ges = 4
+Agi = 4
+
+Vampir
+Leben: 100 | 40 + 40 = 90
+Nahkampf: 60 | 18 + 40 = 58
+Bewegung: 7 | 15 + 40 = 5.5
+Fernkampf: 50 | 42 + 15 = 57
+Kon = 5
+Str = 8
+Ges = 6
+Agi = 5
+
+Mensch
+Leben: 70 | 32 + 25 = 67
+Nahkampf: 40 | 15 + 25 = 40
+Bewegung: 5 | 16 + 28 = 4.4
+Fernkampf: 50 | 35 + 12 = 47
+Kon = 4
+Str = 5
+Ges = 5
+Agi = 4
+
+Engel
+Leben: 60 | 32 + 15 = 57
+Nahkampf: 30 | 15 + 21 = 36
+Bewegung: 8 | 12 + 56 + 1 = 7.8
+Fernkampf: 60
+Kon = 4
+Str = 3
+Ges = 7
+Agi = 7
+
+
+Werwolf
+Werte*2
+kann keine Waffen benutzen, bis auf Krallen
+Verwandlung dauert einen Zug
+
+
+
+
+# mission list:
+chapter_one = [["W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W"],
+               ["W", "O", "O", "O", "T", "W", "W", "W", "W", "W", "W", "W", "W", "W", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "O", "O",  1 , "O", "W", "W", "W", "W", "W", "W", "W", "W", "W", "O",  4 , "O", "L", "O", "O", "W"],
+               ["W", "O",  1 , "O", "O", "W", "W", "W", "W", "W", "W", "W", "W", "W", "O", "O", "O", "W", "W", "W", "W"],
+               ["W", "O", "B", "B", "B", "W", "W", "W",  2 ,  2 , "W", "W", "W", "W", "O", "O", "O", "W", "W", "W", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W", "W", "W", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O",  3 , "W", "W", "W"],
+               ["W", "O", "O", "O",  4 , "O", "O", "O", "O",  1 , "O",  1 , "O", "O", "O", "O", "O", "W", "W", "W", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W", "W", "W", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O",  1 , "O", "O", "O",  1 , "O", "O", "O", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "B", "B", "B", "B", "B", "B", "B", "O", "O", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "W"],
+               ["W", "O", "O", "O", "O", "O",  1 , "O", "O", "O",  1 , "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "W",  0 , "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "W"],
+               ["W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W"]]
+
+# missions_foes dictionary:
+chapter_one_foes = {
+1:"police",
+2:"D",
+3:"D",
+4:"angel1"
+}
+
+
+### TO-DO:
+KI - Funktionen, wie der Zug abläuft
+2tes Fenster: Charakter
+3tes Fenster: Shop?
+messageboxen mit Gegnerinfo?
+muss ich die widgetlist jeder Funktion geben, die sie verändern will? muss ich sie den Funktionen davor geben?
+def sight()
+
+Klassen-todo:
+Upgrades (muss vllt keine Klasse sein)
+Maps
+
+###

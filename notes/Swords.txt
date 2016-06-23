@@ -1,0 +1,37 @@
+# ABOUT
+Swords:
+name
+Damage
+Critical ( Damage*2 )
+Stun
+Cost
+Silverdamage ( Damage*2 )
+
+# WEAPONS
+none = ["Faust", 0, 0.0, 0.3, 0, False]
+
+teli = ["Teleskopschlagstock", 20, 0.0, 0.3, 20, False]
+
+knife = ["Messer", 30, 0.2, 0.0, 20, False]
+
+shortsword = ["Kurzschwert", 50, 0.3, 0.0, 40, False]
+
+longsword = ["Langschwert", 70, 0.4, 0.1, 70, False]
+
+nunchaku = ["Nun-Chakus", 50, 0.1, 0.7, 70, False]
+
+mace = ["Streitkolben", 70, 0.1, 0.5, 70, False]
+
+claymore = ["Zweihänder", 120, 0.3, 0.2, 120, False]
+
+katana = ["Katana", 75, 0.6, 0.1, 100, False]
+
+silversword = ["Silberschwert", 50, 0.3, 0.2, 90, True]
+
+silverdagger = ["Silberdolch", 30, 0.2, 0.0, 40, True]
+
+whip = ["Silberpeitsche", 30, 0.7, 0.8, 60, True]
+
+krallen = ["Krallen", 30, 0.3, 0.6, 9999, False]
+
+silverkrallen = ["Silberkrallen", 30, 0.4, 0.7, 150, True]

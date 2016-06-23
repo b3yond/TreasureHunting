@@ -1,0 +1,91 @@
+# ABOUT
+Frequency # Schuss pro Zug
+Damage # Schaden pro Schuss
+Range # Reichweite
+Cost # Kosten beim Händler
+max. 2 Upgrades
+
+allguns = [none, glock, uzi, ak74, p90, abgesägte_shotgun, shotgun, awp, m4, lmg]
+# GUNS
+none = {
+"F":0
+"D":0
+"R":0
+"C":0
+}
+
+glock = {
+"F":2,
+"D":10,
+"R":4,
+"C":30}
+
+uzi = {
+"F":4,
+"D":10,
+"R":3,
+"C":50}
+
+ak74 = {
+"F":2,
+"D": 30,
+"R": 5,
+"C": 80}
+
+p90 = {
+"F":3,
+"D":15,
+"R":4,
+"C":60}
+
+abgesägte_shotgun = {
+"F": 1,
+"D": 50,
+"R": 2,
+"C": 30}
+
+shotgun = {
+"F":1,
+"D":70,
+"R":3,
+"C":80}
+
+awp = {
+"F":1,
+"D":90,
+"R":8,
+"C":140}
+
+m4 = {
+"F":3,
+"D":25,
+"R":6,
+"C":110}
+
+lmg = {
+"F":7,
+"D":10,
+"R":4,
+"C":130}
+
+# UPGRADES
+Verlängerter Lauf
+R += 2
+C: 60
+
+Halbmantelgeschosse
+D += 5
+C: 60
+
+Verbesserte Mechanik
+F += 1
+C: 60
+
+Keramikwaffe # erhöht Bewegunsgeschwindigkeit
+movement += 1
+C: 60
+
+Silberkugeln
+if target.race != "human":
+    D += 10
+C: 80

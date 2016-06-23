@@ -1,0 +1,33 @@
+kosten alle 100 bitcoins
+maximal 3 davon
+
+Beinmechanik
+movement += 1
+
+Reaktionschip
+10 % Chance auf einen zweiten Zug nacheinander
+
+Kevlarimplantat
+hp += 20
+
+Augenprozessor
+ges += 2
+
+Schönheits-OP
+alle Kosten -10
+
+Angstblocker
+Schusswaffen im Nahkampf nutzbar
+
+Wallhack
+keine Mali wegen Deckung ( Barrikaden )
+
+Genetik-Upgrade
+player.morph = True
+
+Lernsoftware
+benötigte XP/Level -15
+
+GLÜCK
+Zufallstests += 0.1
+

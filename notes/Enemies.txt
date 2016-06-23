@@ -1,0 +1,88 @@
+name, race, kons, srgs, gess, agis, gun, sword, image, bitcoinloot
+
+civilian = ["Bürger", human, 0, 0, 0, 0, "None", "None", randint(5,15)]
+boss = ["Anführer", human, 7, 6, 6, 7, "random", "random", randint(40,70)]
+
+police =  ["Polizist", human, 0, 0, 0, 0, "glock", "teli", randint(5,10)]
+security = ["Private Security", human, 1, 2, 0, 0, "random", "teli", randint(1,10)]
+mercenary = ["Söldner", human, 2, 3, 2, 2, "ak74", "knife", randint(5,20)]
+soldier = ["Soldat", human, 3, 3, 3, 3, "random", "knife", randint(10,20)]
+taskforce = ["Spezialeinheit", human, 5, 5, 5, 5, "random", "random", randint(10, 5)]
+
+criminal = ["Krimineller", human, 1, 1, 2, 3, "random", "random", randint(1,15)]
+terrorist = ["Terrorist", human, 1, 2, 4, 4, "random", "random", randint(1,15)]
+
+silver = ["Verschwörungstheoretiker", human, 0, 0, 0, 0, "random", "silversword", randint(1,10)]
+silver2 = ["Atheist", human, 4, 5, 3, 1, "random", "whip", randint(10,20)]
+
+angel1 = ["Engel", angel, 1, 0, 1, 0, "random", "random", randint(10,15)]
+angel2 = ["Engel", angel, 2, 1, 3, 1, "random", "random", randint(15,25)]
+
+vampire1 = ["Vampir", vampire, 1, 1, 0, 0, "random", "random", randint(10,15)]
+vampire2 = ["Vampir", vampire, 2, 3, 1, 1, "random", "random", randint(15,25)]
+
+werewolf1 = ["Werwolf", werewolf, 0, 0, 1, 1, "random", "krallen", randint(10, 15)]
+werewolf2 = ["Werwolf", werewolf, 1, 3, 1, 2, "random", "silverkrallen", randint(15,25)]
+
+
+class Enemy():
+    def __init__(self, name, race, kon, srg, ges, agi, gun, sword, loot, experience):
+        self.name = name
+        self.race = race
+        self.kon = kon
+        self.srg = srg
+        self.ges = ges
+        self.agi = agi
+        self.gun = gun
+        self.sword = sword
+        self.loot = loot
+        self.experience = experience
+    def ai_turn(self):
+        pass # here comes the enemy turn
+    def showinfo(self):
+        pass # open an infobox with info about the enemy on right-click
+class Police(Enemy):
+    def __init__(self):
+        super().__init__("Polizist", "human", 4, 5, 5, 4, "glock", "teli", randint(5,10))
+class Security(Enemy):
+    def __init__(self):
+        super().__init__("Private Security", "human", 5, 7, 5, 4, "random", "teli", randint(1,10))
+class Mercenary(Enemy):
+    def __init__(self):
+        super().__init__("Söldner", "human", 6, 8, 8, 6, "ak74", "knife", randint(5,20))
+class Soldier(Enemy):
+    def __init__(self):
+        super().__init__("Soldat", "human", 7, 8, 8, 7, "random", "knife", randint(10,20))
+class Taskforce(Enemy):
+    def __init__(self):
+        super().__init__("Spezialeinheit", "human", 9, 10, 10, 9, "random", "random", randint(10, 5))
+class Criminal(Enemy):
+    def __init__(self):
+        super().__init__("Krimineller", "human", 5, 6, 7, 7, "random", "random", randint(1,15))
+class Terrorist(Enemy):
+    def __init__(self):
+        super().__init__("Terrorist", "human", 5, 7, 9, 8, "random", "random", randint(1,15))
+class Silver1(Enemy):
+    def __init__(self):
+        super().__init__("Verschwörungstheoretiker", "human", 4, 5, 5, 4, "random", "silversword", randint(1,10))
+class Silver2(Enemy):
+    def __init__(self):
+        super().__init__("Atheist", "human", 8, 10, 8, 5, "random", "whip", randint(10,20))
+class Angel1(Enemy):
+    def __init__(self):
+        super().__init__("Engel", "angel", 5, 3, 8, 7, "random", "random", randint(10,15))
+class Angel2(Enemy):
+    def __init__(self):
+        super().__init__("Engel", "angel", 6, 4, 10, 8, "random", "random", randint(15,25))
+class Vampire1(Enemy):
+    def __init__(self):
+        super().__init__("Vampir", "vampire", 7, 9, 5, 5, "random", "random", randint(10,15))
+class Vampire2(Enemy):
+    def __init__(self):
+        super().__init__("Vampir", "vampire", 8, 11, 6, 6, "random", "random", randint(15,25))
+class Werewolf1(Enemy):
+    def __init__(self):
+        super().__init__("Werwolf", "werewolf", 4, 5, 6, 5, "random", "krallen", randint(10, 15))
+class Werewolf2(Enemy):
+    def __init__(self):
+        super().__init__("Werwolf", "werewolf", 5, 8, 6, 6, "random", "silverkrallen", randint(15,25))
