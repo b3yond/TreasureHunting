@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-__author__ = 'medusa'
+
 # IMPORTS
 import sys
 from tkinter import *
